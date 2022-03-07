@@ -12,12 +12,12 @@ export const Home: React.FC = () => {
         <h1>Join Teams Call</h1>
         <p>Connecting to Azure Communications Services (ACS) endpoint: {process.env.REACT_APP_COMMUNICATION_SERVICES_ENDPOINT}</p>
 
-        {callAgent ?
+
+        <UserSetup callAgentSet={(newAgent: CallAgent)=>setCallAgent(newAgent)} callClient={callClient} />
+        {callAgent &&
             <div>
                 <JoinCall callAgent={callAgent} callClient={callClient} />
             </div>
-            :
-            <UserSetup callAgentSet={(newAgent: CallAgent)=>setCallAgent(newAgent)} callClient={callClient} />
         }
 
     </div>;

@@ -39,7 +39,7 @@ export const JoinCall: React.FC<{ callClient: CallClient, callAgent: CallAgent }
             </>
             :
             <>
-                <h4>Active Call</h4>
+                <h4>[2/2]: Participate in Call</h4>
                 <ActiveCallDetails call={activeCall} hungup={callHungUp} callClient={props.callClient} callAgent={props.callAgent} />
             </>
         }
